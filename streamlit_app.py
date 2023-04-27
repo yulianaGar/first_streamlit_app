@@ -14,8 +14,10 @@ my_fruit_list=pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/
 
 my_fruit_list = my_fruit_list.set_index('Fruit')
 
+
+
 # Pongamos una lista de selección aquí para que puedan escoger la fruta que quieren incluir 
-streamlit.multiselect("Recoger algunas frutas:", list(my_fruit_list.index)) 
+streamlit.multiselect("Pick some fruots:", list(my_fruit_list.index), ['Avocado','Strawberries'])
 
 # Mostrar la tabla en la página.
 
